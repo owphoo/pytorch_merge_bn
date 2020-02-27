@@ -8,7 +8,7 @@ python pytorch_merge_bn.py YOUR_PYTORCH_MODEL
 
 2. Run the merged bn model
 ```
-# You should set params **bias=True** in nn.Conv2d or nn.ConvTranspose2d first
+# You should set params **bias=True** in nn.Conv2d and nn.ConvTranspose2d first
 net = YourNet()
 net = net.cuda()
 net.eval()
