@@ -41,7 +41,7 @@ def merge(params, name, layer, deconv_layer_names=['deconv']):
                 weights = (tmp.view(tmp.size()[0], 1, 1, 1) * weights.permute(1,0,2,3)).permute(1,0,2,3)
             else:
                 weights = tmp.view(tmp.size()[0], 1, 1, 1) * weights
-            bias = tmp*(bias - bn_param['running_mean']) + bn_param['bias']
+            bias = tmp * (bias - bn_param['running_mean']) + bn_param['bias']
 
             return weights, bias
 
