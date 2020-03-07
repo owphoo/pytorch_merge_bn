@@ -1,7 +1,6 @@
 import torch
 import os
 from collections import OrderedDict
-import cv2
 import numpy as np
 
 global merged
