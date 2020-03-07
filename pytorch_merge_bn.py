@@ -9,6 +9,7 @@ def merge(params, name, layer, deconv_layer_names=['deconv']):
     # global variables
     global weights, bias
     global bn_param
+    global merged
 
     is_deconv = False
     for deconv_name in deconv_layer_names:
