@@ -122,4 +122,6 @@ if __name__ == '__main__':
     # save new weights
     model_name = model_path[model_path.rfind('/')+1:]
     model_path = model_path[:model_path.rfind('/')]
+    if model_path.find('/') == -1:
+        model_path = './'
     torch.save(checkpoint, model_path + '/merge_bn_' + model_name)
